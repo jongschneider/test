@@ -1,0 +1,16 @@
+# Git Branch Manager Configuration
+
+# Worktree definitions - key is the worktree name, value defines the branch and merge strategy
+worktrees:
+  # Primary worktree - no merge_into (root of merge chain)
+  main:
+    branch: main
+    description: "Main branch"
+  preview:
+    branch: preview
+    description: "Preview branch"
+    merge_into: main
+  production:
+    branch: production
+    description: "Production branch"
+    merge_into: preview
